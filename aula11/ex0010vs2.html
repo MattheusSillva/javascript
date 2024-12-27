@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt=Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra de você é eastrangeiro</title>
+</head>
+<style>
+    #res {
+        display: inline-block;
+            padding: 15px 30px;
+            background-color: #977c7c;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+    }
+    
+
+
+
+    body{ 
+        background-color: rgb(213, 196, 196);
+        font: normal 15pt Arial;
+        
+        
+    }
+
+
+
+
+
+</style>
+<body>
+    Em que pais voce nasceu? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick = "verificar()">
+    <div id="res">Resultado</div>
+
+    <script> 
+        function verificar(){
+            var pais = document.getElementById("pais")
+            var res = document.getElementById("res")
+            
+
+            if (pais.value == "Brasil") {
+                res.innerHTML = "Voce é brasileiro"
+        }else{
+            res.innerHTML = `Voce nasceu em ${pais.value}, voce é estrangeiro.`
+        }
+
+            
+        }
+       
+
+    </script>
+</body>
+</html>
